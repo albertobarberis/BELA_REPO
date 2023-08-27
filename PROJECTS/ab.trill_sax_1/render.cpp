@@ -2,15 +2,14 @@
 
 Connecting and Detecting Multiple Trill
 And send data via OSC 
+Alberto Barberis
+
+From the example: Communication/OSC/render.cpp
+
 =========================================
 
 NOTE: as this example scans several addresses on the i2c bus
 it could cause non-Trill peripherals connected to it to malfunction.
-
-
-Tratto da:
-
-\example Communication/OSC/render.cpp
 
 OSC
 
@@ -18,7 +17,11 @@ It is designed to be run alongside resources/osc/osc.js.
 For the example to work, run in a terminal on the board
 ```
 node /root/Bela/resources/osc/osc.js
+
 ```
+HAND SHAKE
+
+Open Max befor running the code on the Bela board. 
 
 In `setup()` an OSC message to address `/osc-setup`, it then waits
 1 second for a reply on `/osc-setup-reply`.
@@ -28,6 +31,7 @@ which is called every time a new message comes in.
 
 METODI di conversione
 da: http://gruntthepeon.free.fr/oscpkt/html/oscpkt_8hh_source.html
+
 // parse messages received by the OSC receiver
 // msg is Message class of oscpkt: http://gruntthepeon.free.fr/oscpkt/
 
@@ -37,11 +41,6 @@ popFloat(f)
 popDouble(d)
 popStr(s)
 popBlob(b)
-
-
-NB:
-DEVI AVERE L'handshakeReceivedLO FACCIO DA MAX
-
 
 */
 
@@ -60,9 +59,13 @@ OscSender oscSender;
 int localPort = 6900; // PORTA LOCALE
 int remotePort = 6901; // PORTA DI RICEZIONE
 
-// IP DELLA RETE 192.168.10.1
 
-const char* remoteIp = "192.168.7.1"; // IP DEL PC
+// To communicate with Bela connected with the PC 
+// this is the IP of the PC 192.168.7.1 
+// this is the IP of the Bela connected via USB 192.168.7.2 
+const char* remoteIp = "192.168.7.1"; 
+
+// Alternatively to communicate with Ethernet the IP has to be 192.168.10.1
 
 bool handshakeReceived;
 
