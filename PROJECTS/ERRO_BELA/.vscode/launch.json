@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/albertobarberis/dev/BELA_REPO/PROJECTS/ORATORIO_TRIL_O2O",
+      "program": "/Users/albertobarberis/dev/BELA_REPO/PROJECTS/ORATORIO_TRIL_O2O/build/Debug/outDebug"
+    }
+  ]
+}
