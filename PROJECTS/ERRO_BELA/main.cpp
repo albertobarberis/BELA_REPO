@@ -8,8 +8,8 @@
 #include <atomic>
 
 // ============ Constants ============
-const int MAX_SENSORS = 6;
-const int MAX_BUTTONS = 2;
+const int MAX_SENSORS = 8;
+const int MAX_BUTTONS = 4;
 const int remotePort = 6901;
 const char* remoteIp = "192.168.7.1";
 const float gSendInterval = 0.05f;
